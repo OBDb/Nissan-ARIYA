@@ -1,0 +1,16 @@
+command_id: 743.763.220E01
+can_id_format: ELEVEN_BIT
+extended_addressing_enabled: false
+test_cases:
+- response: 76306620E010098FA
+  expected_values:
+    NISSAN_ODO: 39162
+- response: 76306620E010098FE
+  expected_values:
+    NISSAN_ODO: 39166
+- response: 76306620E010098FF
+  expected_values:
+    NISSAN_ODO: 39167
+- response: '76306620E01009908'
+  expected_values:
+    NISSAN_ODO: 39176
