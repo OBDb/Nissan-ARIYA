@@ -1,0 +1,5 @@
+command_id: DB33.0150
+test_cases:
+- response: 18DAF11006415000000000
+  expected_values:
+    MAX_MAF: 0
