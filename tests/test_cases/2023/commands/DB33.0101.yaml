@@ -16,16 +16,16 @@ test_cases:
     EVAP_RDY: 0
     EVAP_SUP: 0
     FUEL_RDY: 0
-    FUEL_SUP: 1
+    FUEL_SUP: 0
     HCAT_RDY: 0
     HCAT_SUP: 0
     HTR_RDY: 0
     HTR_SUP: 0
     MIL: 0
     MIS_RDY: 0
-    MIS_SUP: 1
+    MIS_SUP: 0
     O2S_RDY: 0
     O2S_SUP: 0
   response: |-
-    18DAF1DB06410100040000
     18DAF11006410100070000
+    18DAF1DB06410100040000
