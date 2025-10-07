@@ -1,0 +1,17 @@
+command_id: 743.763.220E26|fc=1
+test_cases:
+- expected_values:
+    NISSAN_TP_FL_V2: 0
+  response: '76304620E2600'
+- expected_values:
+    NISSAN_TP_FL_V2: 296.47458
+  response: 76304620E26AC
+- expected_values:
+    NISSAN_TP_FL_V2: 310.26409
+  response: 76304620E26B4
+- expected_values:
+    NISSAN_TP_FL_V2: 317.15885
+  response: 76304620E26B8
+- expected_values:
+    NISSAN_TP_FL_V2: 324.05361
+  response: 76304620E26BC
