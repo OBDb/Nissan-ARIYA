@@ -1,0 +1,29 @@
+command_id: '744.224008'
+test_cases:
+- expected_values:
+    NISSAN_AAT: 6
+  response: 764046240082E
+- expected_values:
+    NISSAN_AAT: 10
+  response: '7640462400832'
+- expected_values:
+    NISSAN_AAT: 11
+  response: '7640462400833'
+- expected_values:
+    NISSAN_AAT: 14
+  response: '7640462400836'
+- expected_values:
+    NISSAN_AAT: 17
+  response: '7640462400839'
+- expected_values:
+    NISSAN_AAT: 21
+  response: 764046240083D
+- expected_values:
+    NISSAN_AAT: 22
+  response: 764046240083E
+- expected_values:
+    NISSAN_AAT: 24
+  response: '7640462400840'
+- expected_values:
+    NISSAN_AAT: 26
+  response: '7640462400842'
