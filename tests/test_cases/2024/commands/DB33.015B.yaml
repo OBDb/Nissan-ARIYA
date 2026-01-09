@@ -1,5 +1,5 @@
 command_id: DB33.015B
 test_cases:
-- response: 18DAF1DB03415BCE
-  expected_values:
+- expected_values:
     BAT_SOC: 80.78431
+  response: 18DAF1DB03415BCE
