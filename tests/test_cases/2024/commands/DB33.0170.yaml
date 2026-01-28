@@ -14,3 +14,5 @@ test_cases:
     BP_B_CMD: 0
     BP_B_CMD_SUP: 0
     BP_B_SUP: 0
+    BP_A: null
+    BP_B: null
