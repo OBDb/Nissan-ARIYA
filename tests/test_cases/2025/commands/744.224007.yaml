@@ -1,0 +1,31 @@
+command_id: '744.224007'
+test_cases:
+- expected_values:
+    NISSAN_AC_STATUS: 0
+  response: '7640762400700000000'
+- expected_values:
+    NISSAN_AC_STATUS: 0
+  response: '7640762400700400000'
+- expected_values:
+    NISSAN_AC_STATUS: 2
+  response: '7640762400702000000'
+- expected_values:
+    NISSAN_AC_STATUS: 2
+  response: '7640762400702400000'
+- expected_values:
+    NISSAN_AC_STATUS: 32
+  response: '7640762400720000000'
+- expected_values:
+    NISSAN_AC_STATUS: 32
+  response: |-
+    7640762400720000000
+    7470322F18E
+- expected_values:
+    NISSAN_AC_STATUS: 34
+  response: '7640762400722000000'
+- expected_values:
+    NISSAN_AC_STATUS: 128
+  response: '7640762400780000000'
+- expected_values:
+    NISSAN_AC_STATUS: 128
+  response: '7640762400780400000'
