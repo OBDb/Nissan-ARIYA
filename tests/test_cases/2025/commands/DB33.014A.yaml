@@ -1,0 +1,32 @@
+command_id: DB33.014A
+test_cases:
+- expected_values:
+    APP_E: 0
+  response: 18DAF11003414A00
+- expected_values:
+    APP_E: 25.88235
+  response: |-
+    18DAF11003414A42
+    18DAF1DB024300
+- expected_values:
+    APP_E: 26.27451
+  response: |-
+    18DAF11003414A43
+    18DAF1DB03410D2F
+    18DAF1DB04410C0000
+    18DAF1DB06410100040000
+    18DAF11006410100070000
+- expected_values:
+    APP_E: 28.62745
+  response: |-
+    18DAF11003414A49
+    18DAF11006410100070000
+    18DAF1DB06410100040000
+- expected_values:
+    APP_E: 39.21569
+  response: |-
+    18DAF11003414A64
+    18DAF1DB024300
+- expected_values:
+    APP_E: 65.09804
+  response: 18DAF11003414AA6
