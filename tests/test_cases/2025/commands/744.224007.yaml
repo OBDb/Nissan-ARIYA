@@ -1,0 +1,57 @@
+command_id: '744.224007'
+test_cases:
+- expected_values:
+    NISSAN_AC_STATUS: 0
+  response: '7640762400700000000'
+- expected_values:
+    NISSAN_AC_STATUS: 0
+  response: |-
+    7640762400700000000
+    7450322F1A0
+- expected_values:
+    NISSAN_AC_STATUS: 0
+  response: |-
+    7640762400700000000
+    74D0322F1A0
+- expected_values:
+    NISSAN_AC_STATUS: 0
+  response: |-
+    7640762400700000000
+    767101762F18C303030
+    747300100
+    7672130303030324247
+    747300100
+    767223431524A452020
+    747300100
+    76723202020FFFFFFFF
+- expected_values:
+    NISSAN_AC_STATUS: 0
+  response: '7640762400700400000'
+- expected_values:
+    NISSAN_AC_STATUS: 0
+  response: |-
+    7640762400700400000
+    7450322F1A0
+- expected_values:
+    NISSAN_AC_STATUS: 0
+  response: |-
+    7640762400700400000
+    7470322F195
+    767100E62F195373230
+    747300100
+    76721365F3235303530
+    747300100
+    7672239FFFFFFFFFFFF
+- expected_values:
+    NISSAN_AC_STATUS: 32
+  response: |-
+    7640762400720000000
+    7470322F18E
+- expected_values:
+    NISSAN_AC_STATUS: 32
+  response: |-
+    7640762400720000000
+    75C0322F1A0
+- expected_values:
+    NISSAN_AC_STATUS: 130
+  response: '7640762400782000000'
