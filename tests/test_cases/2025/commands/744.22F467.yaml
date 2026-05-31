@@ -1,0 +1,58 @@
+command_id: 744.22F467
+test_cases:
+- expected_values:
+    NISSAN_ECT: 215
+  response: 7640462F467FF
+- expected_values:
+    NISSAN_ECT: 215
+  response: |-
+    7640462F467FF
+    7450322F1A0
+- expected_values:
+    NISSAN_ECT: 215
+  response: |-
+    7640462F467FF
+    7470322F187
+    767100D62F187303030
+    747300100
+    7672130303030303030
+- expected_values:
+    NISSAN_ECT: 215
+  response: |-
+    7640462F467FF
+    7470322F18A
+    767100862F18A424F53
+    747300100
+    767214348FFFFFFFFFF
+- expected_values:
+    NISSAN_ECT: 215
+  response: |-
+    7640462F467FF
+    7470322F194
+    767101962F194495F50
+    747300100
+    76721524A5F524E5F41
+    747300100
+    767224956495F32332E
+    747300100
+    767233132563036FFFF
+- expected_values:
+    NISSAN_ECT: 215
+  response: |-
+    7640462F467FF
+    7470322F195
+    767100E62F195373230
+    747300100
+    76721365F3235303530
+    747300100
+    7672239FFFFFFFFFFFF
+- expected_values:
+    NISSAN_ECT: 215
+  response: |-
+    7640462F467FF
+    74F0322F1A0
+- expected_values:
+    NISSAN_ECT: 215
+  response: |-
+    7640462F467FF
+    75C0322F1A0
