@@ -1,0 +1,8 @@
+command_id: 744.764.224008
+test_cases:
+- expected_values:
+    ARIYA_AAT: 4
+  response: 764046240082C
+- expected_values:
+    ARIYA_AAT: 38
+  response: 764046240084E

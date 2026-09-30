@@ -1,0 +1,8 @@
+command_id: 743.763.220E26|fc=1
+test_cases:
+- expected_values:
+    ARIYA_TP_FL: 227.527
+  response: '76304620E2684'
+- expected_values:
+    ARIYA_TP_FL: 324.05361
+  response: 76304620E26BC
