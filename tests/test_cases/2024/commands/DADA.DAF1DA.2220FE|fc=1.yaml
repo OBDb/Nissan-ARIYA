@@ -1,0 +1,5 @@
+command_id: DADA.DAF1DA.2220FE|fc=1
+test_cases:
+- expected_values:
+    ARIYA_DC_BAT_V: 392
+  response: 18DAF1DA056220FE0F50
