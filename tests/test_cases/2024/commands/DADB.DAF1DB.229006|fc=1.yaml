@@ -1,0 +1,5 @@
+command_id: DADB.DAF1DB.229006|fc=1
+test_cases:
+- expected_values:
+    ARIYA_HVBAT_V: 391.96875
+  response: 18DAF1DB0762900600061FE0
