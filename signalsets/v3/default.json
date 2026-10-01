@@ -1,4 +1,890 @@
 { "commands": [
-
+{ "hdr": "743", "rax": "763", "fcm1": true, "dbg": true, "cmd": {"21": "01"}, "freq": 30,
+  "signals": [
+    {"id": "ARIYA_ODO_METER", "path": "Trips", "fmt": {"bix": 64, "len": 16, "max": 65535, "unit": "kilometers" }, "name": "Odometer, meter group 1", "suggestedMetric": "odometer"}
+  ]},
+{ "hdr": "743", "rax": "763", "fcm1": true, "cmd": {"22": "0E01"}, "freq": 30, "dbgfilter": { "to": 2022, "from": 2026 },
+  "signals": [
+    {"id": "ARIYA_ODO", "path": "Trips", "fmt": { "len": 24, "max": 16777215, "unit": "miles" }, "name": "Odometer", "suggestedMetric": "odometer"}
+  ]},
+{ "hdr": "743", "rax": "763", "fcm1": true, "cmd": {"22": "0E25"}, "freq": 15, "dbgfilter": { "to": 2022, "from": 2026 },
+  "signals": [
+    {"id": "ARIYA_TP_FR", "path": "Tires", "fmt": { "len": 8, "max": 439.5, "mul": 1.7236894, "nullmin": 0, "unit": "kilopascal" }, "name": "Front right tire pressure", "suggestedMetric": "frontRightTirePressure"}
+  ]},
+{ "hdr": "743", "rax": "763", "fcm1": true, "cmd": {"22": "0E26"}, "freq": 15, "dbgfilter": { "to": 2022, "from": 2026 },
+  "signals": [
+    {"id": "ARIYA_TP_FL", "path": "Tires", "fmt": { "len": 8, "max": 439.5, "mul": 1.7236894, "nullmin": 0, "unit": "kilopascal" }, "name": "Front left tire pressure", "suggestedMetric": "frontLeftTirePressure"}
+  ]},
+{ "hdr": "743", "rax": "763", "fcm1": true, "cmd": {"22": "0E27"}, "freq": 15, "dbgfilter": { "to": 2022, "from": 2026 },
+  "signals": [
+    {"id": "ARIYA_TP_RR", "path": "Tires", "fmt": { "len": 8, "max": 439.5, "mul": 1.7236894, "nullmin": 0, "unit": "kilopascal" }, "name": "Rear right tire pressure", "suggestedMetric": "rearRightTirePressure"}
+  ]},
+{ "hdr": "743", "rax": "763", "fcm1": true, "cmd": {"22": "0E28"}, "freq": 15, "dbgfilter": { "to": 2022, "from": 2026 },
+  "signals": [
+    {"id": "ARIYA_TP_RL", "path": "Tires", "fmt": { "len": 8, "max": 439.5, "mul": 1.7236894, "nullmin": 0, "unit": "kilopascal" }, "name": "Rear left tire pressure", "suggestedMetric": "rearLeftTirePressure"}
+  ]},
+{ "hdr": "744", "rax": "764", "dbg": true, "cmd": {"21": "10"}, "freq": 5,
+  "signals": [
+    {"id": "ARIYA_HVAC_AAT",      "path": "Climate", "fmt": {            "len": 8,  "max": 215,   "min": -40, "add": -40, "unit": "celsius" }, "name": "Ambient air temperature, climate module"},
+    {"id": "ARIYA_HVAC_CABIN_T",  "path": "Climate", "fmt": {"bix": 8,   "len": 8,  "max": 215,   "min": -40, "add": -40, "unit": "celsius" }, "name": "Cabin temperature"},
+    {"id": "ARIYA_HVAC_EVAP_T",   "path": "Climate", "fmt": {"bix": 16,  "len": 8,  "max": 215,   "min": -40, "add": -40, "unit": "celsius" }, "name": "Evaporator temperature"},
+    {"id": "ARIYA_HVAC_SUNLOAD",  "path": "Climate", "fmt": {"bix": 24,  "len": 8,  "max": 255,                           "unit": "scalar"  }, "name": "Sun load"},
+    {"id": "ARIYA_HVAC_AC_ON",    "path": "Climate", "fmt": {"bix": 80,  "len": 1,  "max": 1,                             "unit": "offon"   }, "name": "Air conditioning on"},
+    {"id": "ARIYA_HVAC_FAN_ON",   "path": "Climate", "fmt": {"bix": 88,  "len": 1,  "max": 1,                             "unit": "offon"   }, "name": "Blower on"},
+    {"id": "ARIYA_HVAC_BLOWER_V", "path": "Climate", "fmt": {"bix": 89,  "len": 7,  "max": 127,                           "unit": "volts"   }, "name": "Blower voltage"},
+    {"id": "ARIYA_AC_COMP_RPM",   "path": "Climate", "fmt": {"bix": 168, "len": 16, "max": 65535,                         "unit": "rpm"     }, "name": "Air conditioning compressor speed"}
+  ]},
+{ "hdr": "744", "rax": "764", "cmd": {"22": "4007"}, "freq": 5, "dbgfilter": { "to": 2022, "from": 2026 },
+  "signals": [
+    {"id": "ARIYA_AC_STATUS", "path": "Climate", "fmt": { "len": 8, "max": 255, "unit": "offon" }, "name": "Air conditioning status"}
+  ]},
+{ "hdr": "744", "rax": "764", "cmd": {"22": "4008"}, "freq": 5, "dbgfilter": { "to": 2022, "from": 2026 },
+  "signals": [
+    {"id": "ARIYA_AAT", "path": "Climate", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Ambient air temperature"}
+  ]},
+{ "hdr": "744", "rax": "764", "cmd": {"22": "F467"}, "freq": 5, "dbgfilter": { "to": 2022, "from": 2026 },
+  "signals": [
+    {"id": "ARIYA_ECT", "path": "Climate", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Coolant temperature"}
+  ]},
+{ "hdr": "DADA", "rax": "DAF1DA", "fcm1": true, "dbg": true, "cmd": {"22": "2003"}, "freq": 0.25,
+  "signals": [
+    {"id": "ARIYA_VSS", "path": "Movement", "fmt": { "len": 16, "max": 655, "div": 100, "unit": "kilometersPerHour" }, "name": "Vehicle speed", "suggestedMetric": "speed"}
+  ]},
+{ "hdr": "DADA", "rax": "DAF1DA", "fcm1": true, "dbg": true, "cmd": {"22": "20FE"}, "freq": 5,
+  "signals": [
+    {"id": "ARIYA_DC_BAT_V", "path": "Battery", "fmt": { "len": 16, "max": 6553, "div": 10, "unit": "volts" }, "name": "DC battery voltage"}
+  ]},
+{ "hdr": "DADA", "rax": "DAF1DA", "fcm1": true, "dbg": true, "cmd": {"22": "21CC"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_DC_BAT_CURRENT", "path": "Battery", "fmt": { "len": 16, "max": 500, "min": -15883, "mul": -1, "div": 4, "add": 500, "unit": "amps" }, "name": "DC battery current"}
+  ]},
+{ "hdr": "DADA", "rax": "DAF1DA", "fcm1": true, "dbg": true, "cmd": {"22": "9002"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_DC_BAT_ST_CHG", "path": "Battery", "fmt": { "len": 16, "max": 655, "div": 100, "unit": "percent" }, "name": "DC battery state of charge"}
+  ]},
+{ "hdr": "DADA", "rax": "DAF1DA", "fcm1": true, "dbg": true, "cmd": {"22": "9003"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_DC_BAT_ST_HEALTH", "path": "Battery", "fmt": { "len": 16, "max": 655, "div": 100, "unit": "percent" }, "name": "DC battery state of health"}
+  ]},
+{ "hdr": "DADA", "rax": "DAF1DA", "fcm1": true, "dbg": true, "cmd": {"22": "91C8"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_DC_BAT_CAP", "path": "Battery", "fmt": { "len": 24, "max": 16777, "div": 1000, "unit": "kilowattHours" }, "name": "DC battery capacity"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9001"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_TRACTION_BAT_SOC", "path": "Battery", "fmt": { "len": 16, "max": 652, "min": -3, "div": 100, "add": -3, "unit": "percent" }, "name": "Traction battery state of charge", "suggestedMetric": "stateOfCharge"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9005"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_OPEN_CIRCUIT_V", "path": "Battery", "fmt": { "len": 16, "max": 655, "div": 100, "unit": "volts" }, "name": "Open circuit voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9006"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_V", "path": "Battery", "fmt": { "len": 32, "max": 1000, "div": 1024, "sign": true, "unit": "volts" }, "name": "Traction battery voltage", "suggestedMetric": "tractionBatteryVoltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9007"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HIGHEST_CELL_V_LEVEL", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Highest cell voltage level"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9008"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_CELL_HIGHEST_V", "path": "Battery", "fmt": { "len": 8, "max": 256, "add": 1, "unit": "scalar" }, "name": "Cell with the highest voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9009"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_LOWEST_CELL_V_LEVEL", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Lowest cell voltage level"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "900A"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_CELL_LOWEST_V", "path": "Battery", "fmt": { "len": 8, "max": 256, "add": 1, "unit": "scalar" }, "name": "Cell with the lowest voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9011"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_COMPUTER_POWER_SUP", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Computer power supply"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9012"}, "freq": 5,
+  "signals": [
+    {"id": "ARIYA_TRACTION_BAT_T", "path": "Battery", "fmt": { "len": 16, "max": 4055, "min": -40, "div": 16, "add": -40, "unit": "celsius" }, "name": "Traction battery compartment temperature"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9013"}, "freq": 5,
+  "signals": [
+    {"id": "ARIYA_TRACTION_BAT_MIN_T", "path": "Battery", "fmt": { "len": 16, "max": 4055, "min": -40, "div": 16, "add": -40, "unit": "celsius" }, "name": "Traction battery minimum temperature"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9014"}, "freq": 5,
+  "signals": [
+    {"id": "ARIYA_TRACTION_BAT_MAX_T", "path": "Battery", "fmt": { "len": 16, "max": 4055, "min": -40, "div": 16, "add": -40, "unit": "celsius" }, "name": "Traction battery maximum temperature"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9021"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_1_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 1 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9022"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_2_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 2 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9023"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_3_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 3 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9024"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_4_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 4 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9025"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_5_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 5 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9026"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_6_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 6 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9027"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_7_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 7 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9028"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_8_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 8 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9029"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_9_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 9 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "902A"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_10_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 10 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "902B"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_11_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 11 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "902C"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_12_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 12 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "902D"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_13_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 13 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "902E"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_14_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 14 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "902F"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_15_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 15 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9030"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_16_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 16 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9031"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_17_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 17 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9032"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_18_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 18 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9033"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_19_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 19 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9034"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_20_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 20 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9035"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_21_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 21 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9036"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_22_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 22 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9037"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_23_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 23 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9038"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_24_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 24 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9039"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_25_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 25 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "903A"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_26_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 26 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "903B"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_27_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 27 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "903C"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_28_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 28 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "903D"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_29_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 29 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "903E"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_30_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 30 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "903F"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_31_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 31 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9041"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_32_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 32 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9042"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_33_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 33 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9043"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_34_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 34 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9044"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_35_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 35 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9045"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_36_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 36 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9046"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_37_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 37 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9047"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_38_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 38 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9048"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_39_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 39 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9049"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_40_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 40 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "904A"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_41_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 41 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "904B"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_42_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 42 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "904C"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_43_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 43 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "904D"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_44_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 44 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "904E"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_45_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 45 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "904F"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_46_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 46 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9050"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_47_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 47 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9051"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_48_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 48 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9052"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_49_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 49 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9053"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_50_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 50 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9054"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_51_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 51 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9055"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_52_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 52 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9056"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_53_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 53 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9057"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_54_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 54 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9058"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_55_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 55 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9059"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_56_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 56 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "905A"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_57_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 57 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "905B"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_58_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 58 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "905C"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_59_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 59 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "905D"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_60_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 60 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "905E"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_61_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 61 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "905F"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_62_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 62 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9061"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_63_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 63 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9062"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_64_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 64 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9063"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_65_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 65 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9064"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_66_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 66 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9065"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_67_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 67 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9066"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_68_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 68 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9067"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_69_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 69 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9068"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_70_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 70 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9069"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_71_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 71 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "906A"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_72_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 72 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "906B"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_73_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 73 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "906C"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_74_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 74 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "906D"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_75_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 75 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "906E"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_76_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 76 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "906F"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_77_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 77 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9070"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_78_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 78 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9071"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_79_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 79 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9072"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_80_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 80 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9073"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_81_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 81 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9074"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_82_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 82 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9075"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_83_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 83 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9076"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_84_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 84 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9077"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_85_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 85 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9078"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_86_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 86 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9079"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_87_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 87 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "907A"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_88_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 88 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "907B"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_89_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 89 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "907C"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_90_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 90 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "907D"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_91_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 91 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "907E"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_92_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 92 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "907F"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_93_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 93 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9081"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_94_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 94 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9082"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_95_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 95 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9083"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_HVBAT_CELL_96_V", "path": "Battery", "fmt": { "len": 16, "max": 63.99, "mul": 0.000976563, "unit": "volts" }, "name": "Cell 96 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9129"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_SECONDARY_BMS_NO_12", "path": "Battery", "fmt": {"bix": 20, "len": 1, "max": 1, "unit": "scalar" }, "name": "Secondary battery management board 12"},
+    {"id": "ARIYA_SECONDARY_BMS_NO_11", "path": "Battery", "fmt": {"bix": 21, "len": 1, "max": 1, "unit": "scalar" }, "name": "Secondary battery management board 11"},
+    {"id": "ARIYA_SECONDARY_BMS_NO_10", "path": "Battery", "fmt": {"bix": 22, "len": 1, "max": 1, "unit": "scalar" }, "name": "Secondary battery management board 10"},
+    {"id": "ARIYA_SECONDARY_BMS_NO_9",  "path": "Battery", "fmt": {"bix": 23, "len": 1, "max": 1, "unit": "scalar" }, "name": "Secondary battery management board 9"},
+    {"id": "ARIYA_SECONDARY_BMS_NO_8",  "path": "Battery", "fmt": {"bix": 24, "len": 1, "max": 1, "unit": "scalar" }, "name": "Secondary battery management board 8"},
+    {"id": "ARIYA_SECONDARY_BMS_NO_7",  "path": "Battery", "fmt": {"bix": 25, "len": 1, "max": 1, "unit": "scalar" }, "name": "Secondary battery management board 7"},
+    {"id": "ARIYA_SECONDARY_BMS_NO_6",  "path": "Battery", "fmt": {"bix": 26, "len": 1, "max": 1, "unit": "scalar" }, "name": "Secondary battery management board 6"},
+    {"id": "ARIYA_SECONDARY_BMS_NO_5",  "path": "Battery", "fmt": {"bix": 27, "len": 1, "max": 1, "unit": "scalar" }, "name": "Secondary battery management board 5"},
+    {"id": "ARIYA_SECONDARY_BMS_NO_4",  "path": "Battery", "fmt": {"bix": 28, "len": 1, "max": 1, "unit": "scalar" }, "name": "Secondary battery management board 4"},
+    {"id": "ARIYA_SECONDARY_BMS_NO_3",  "path": "Battery", "fmt": {"bix": 29, "len": 1, "max": 1, "unit": "scalar" }, "name": "Secondary battery management board 3"},
+    {"id": "ARIYA_SECONDARY_BMS_NO_2",  "path": "Battery", "fmt": {"bix": 30, "len": 1, "max": 1, "unit": "scalar" }, "name": "Secondary battery management board 2"},
+    {"id": "ARIYA_SECONDARY_BMS_NO_1",  "path": "Battery", "fmt": {"bix": 31, "len": 1, "max": 1, "unit": "scalar" }, "name": "Secondary battery management board 1"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "912E"}, "freq": 0.25,
+  "signals": [
+    {"id": "ARIYA_FAN_SPD", "path": "Movement", "fmt": { "len": 8, "max": 8160, "mul": 32, "unit": "rpm" }, "name": "Fan speed"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "912F"}, "freq": 5,
+  "signals": [
+    {"id": "ARIYA_T_SENS_MODULE_N_12", "path": "Battery", "fmt": {"bix": 20, "len": 1, "max": 1, "unit": "scalar" }, "name": "Module 12 temperature sensor flag"},
+    {"id": "ARIYA_T_SENS_MODULE_N_11", "path": "Battery", "fmt": {"bix": 21, "len": 1, "max": 1, "unit": "scalar" }, "name": "Module 11 temperature sensor flag"},
+    {"id": "ARIYA_T_SENS_MODULE_N_10", "path": "Battery", "fmt": {"bix": 22, "len": 1, "max": 1, "unit": "scalar" }, "name": "Module 10 temperature sensor flag"},
+    {"id": "ARIYA_T_SENS_MODULE_N_9",  "path": "Battery", "fmt": {"bix": 23, "len": 1, "max": 1, "unit": "scalar" }, "name": "Module 9 temperature sensor flag"},
+    {"id": "ARIYA_T_SENS_MODULE_N_8",  "path": "Battery", "fmt": {"bix": 24, "len": 1, "max": 1, "unit": "scalar" }, "name": "Module 8 temperature sensor flag"},
+    {"id": "ARIYA_T_SENS_MODULE_N_7",  "path": "Battery", "fmt": {"bix": 25, "len": 1, "max": 1, "unit": "scalar" }, "name": "Module 7 temperature sensor flag"},
+    {"id": "ARIYA_T_SENS_MODULE_N_6",  "path": "Battery", "fmt": {"bix": 26, "len": 1, "max": 1, "unit": "scalar" }, "name": "Module 6 temperature sensor flag"},
+    {"id": "ARIYA_T_SENS_MODULE_N_5",  "path": "Battery", "fmt": {"bix": 27, "len": 1, "max": 1, "unit": "scalar" }, "name": "Module 5 temperature sensor flag"},
+    {"id": "ARIYA_T_SENS_MODULE_N_4",  "path": "Battery", "fmt": {"bix": 28, "len": 1, "max": 1, "unit": "scalar" }, "name": "Module 4 temperature sensor flag"},
+    {"id": "ARIYA_T_SENS_MODULE_N_3",  "path": "Battery", "fmt": {"bix": 29, "len": 1, "max": 1, "unit": "scalar" }, "name": "Module 3 temperature sensor flag"},
+    {"id": "ARIYA_T_SENS_MODULE_N_2",  "path": "Battery", "fmt": {"bix": 30, "len": 1, "max": 1, "unit": "scalar" }, "name": "Module 2 temperature sensor flag"},
+    {"id": "ARIYA_T_SENS_MODULE_N_1",  "path": "Battery", "fmt": {"bix": 31, "len": 1, "max": 1, "unit": "scalar" }, "name": "Module 1 temperature sensor flag"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9131"}, "freq": 5,
+  "signals": [
+    {"id": "ARIYA_MODULE_T_NUMBER_1", "path": "Battery", "fmt": { "len": 16, "max": 4055, "min": -40, "div": 16, "add": -40, "unit": "celsius" }, "name": "Module 1 temperature"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9132"}, "freq": 5,
+  "signals": [
+    {"id": "ARIYA_MODULE_T_NUMBER_2", "path": "Battery", "fmt": { "len": 16, "max": 4055, "min": -40, "div": 16, "add": -40, "unit": "celsius" }, "name": "Module 2 temperature"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9133"}, "freq": 5,
+  "signals": [
+    {"id": "ARIYA_MODULE_T_NUMBER_3", "path": "Battery", "fmt": { "len": 16, "max": 4055, "min": -40, "div": 16, "add": -40, "unit": "celsius" }, "name": "Module 3 temperature"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9134"}, "freq": 5,
+  "signals": [
+    {"id": "ARIYA_MODULE_T_NUMBER_4", "path": "Battery", "fmt": { "len": 16, "max": 4055, "min": -40, "div": 16, "add": -40, "unit": "celsius" }, "name": "Module 4 temperature"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9135"}, "freq": 5,
+  "signals": [
+    {"id": "ARIYA_MODULE_T_NUMBER_5", "path": "Battery", "fmt": { "len": 16, "max": 4055, "min": -40, "div": 16, "add": -40, "unit": "celsius" }, "name": "Module 5 temperature"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9136"}, "freq": 5,
+  "signals": [
+    {"id": "ARIYA_MODULE_T_NUMBER_6", "path": "Battery", "fmt": { "len": 16, "max": 4055, "min": -40, "div": 16, "add": -40, "unit": "celsius" }, "name": "Module 6 temperature"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9137"}, "freq": 5,
+  "signals": [
+    {"id": "ARIYA_MODULE_T_NUMBER_7", "path": "Battery", "fmt": { "len": 16, "max": 4055, "min": -40, "div": 16, "add": -40, "unit": "celsius" }, "name": "Module 7 temperature"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9138"}, "freq": 5,
+  "signals": [
+    {"id": "ARIYA_MODULE_T_NUMBER_8", "path": "Battery", "fmt": { "len": 16, "max": 4055, "min": -40, "div": 16, "add": -40, "unit": "celsius" }, "name": "Module 8 temperature"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9139"}, "freq": 5,
+  "signals": [
+    {"id": "ARIYA_MODULE_T_NUMBER_9", "path": "Battery", "fmt": { "len": 16, "max": 4055, "min": -40, "div": 16, "add": -40, "unit": "celsius" }, "name": "Module 9 temperature"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "913A"}, "freq": 5,
+  "signals": [
+    {"id": "ARIYA_MODULE_T_NUMBER_10", "path": "Battery", "fmt": { "len": 16, "max": 4055, "min": -40, "div": 16, "add": -40, "unit": "celsius" }, "name": "Module 10 temperature"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "913B"}, "freq": 5,
+  "signals": [
+    {"id": "ARIYA_MODULE_T_NUMBER_11", "path": "Battery", "fmt": { "len": 16, "max": 4055, "min": -40, "div": 16, "add": -40, "unit": "celsius" }, "name": "Module 11 temperature"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "913C"}, "freq": 5,
+  "signals": [
+    {"id": "ARIYA_MODULE_T_NUMBER_12", "path": "Battery", "fmt": { "len": 16, "max": 4055, "min": -40, "div": 16, "add": -40, "unit": "celsius" }, "name": "Module 12 temperature"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "91C9"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_MOTOR_DRIVEN_FAN", "path": "Battery", "fmt": { "len": 8, "max": 127, "div": 2, "unit": "percent" }, "name": "Motor-driven fan unit request"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "91CC"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_BUSBAR_NO_12", "path": "Battery", "fmt": {"bix": 20, "len": 1, "max": 1, "unit": "scalar" }, "name": "Bus bar 12 flag"},
+    {"id": "ARIYA_BUSBAR_NO_11", "path": "Battery", "fmt": {"bix": 21, "len": 1, "max": 1, "unit": "scalar" }, "name": "Bus bar 11 flag"},
+    {"id": "ARIYA_BUSBAR_NO_10", "path": "Battery", "fmt": {"bix": 22, "len": 1, "max": 1, "unit": "scalar" }, "name": "Bus bar 10 flag"},
+    {"id": "ARIYA_BUSBAR_NO_9",  "path": "Battery", "fmt": {"bix": 23, "len": 1, "max": 1, "unit": "scalar" }, "name": "Bus bar 9 flag"},
+    {"id": "ARIYA_BUSBAR_NO_8",  "path": "Battery", "fmt": {"bix": 24, "len": 1, "max": 1, "unit": "scalar" }, "name": "Bus bar 8 flag"},
+    {"id": "ARIYA_BUSBAR_NO_7",  "path": "Battery", "fmt": {"bix": 25, "len": 1, "max": 1, "unit": "scalar" }, "name": "Bus bar 7 flag"},
+    {"id": "ARIYA_BUSBAR_NO_6",  "path": "Battery", "fmt": {"bix": 26, "len": 1, "max": 1, "unit": "scalar" }, "name": "Bus bar 6 flag"},
+    {"id": "ARIYA_BUSBAR_NO_5",  "path": "Battery", "fmt": {"bix": 27, "len": 1, "max": 1, "unit": "scalar" }, "name": "Bus bar 5 flag"},
+    {"id": "ARIYA_BUSBAR_NO_4",  "path": "Battery", "fmt": {"bix": 28, "len": 1, "max": 1, "unit": "scalar" }, "name": "Bus bar 4 flag"},
+    {"id": "ARIYA_BUSBAR_NO_3",  "path": "Battery", "fmt": {"bix": 29, "len": 1, "max": 1, "unit": "scalar" }, "name": "Bus bar 3 flag"},
+    {"id": "ARIYA_BUSBAR_NO_2",  "path": "Battery", "fmt": {"bix": 30, "len": 1, "max": 1, "unit": "scalar" }, "name": "Bus bar 2 flag"},
+    {"id": "ARIYA_BUSBAR_NO_1",  "path": "Battery", "fmt": {"bix": 31, "len": 1, "max": 1, "unit": "scalar" }, "name": "Bus bar 1 flag"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "91CD"}, "freq": 5,
+  "signals": [
+    {"id": "ARIYA_TRACTION_BAT_INPUT_T", "path": "Battery", "fmt": { "len": 16, "max": 4055, "min": -40, "div": 16, "add": -40, "unit": "celsius" }, "name": "Traction battery input water temperature"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "91CF"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_TRACTION_BAT_TOT", "path": "Battery", "fmt": { "len": 32, "max": 134217727, "div": 32, "add": 67108864, "sign": true, "unit": "kilometers" }, "name": "Traction battery total mileage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "91EF"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_FAN_UNIT", "path": "Battery", "fmt": {"bix": 7, "len": 1, "max": 1, "unit": "offon" }, "name": "Fan unit"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "91F0"}, "freq": 0.25,
+  "signals": [
+    {"id": "ARIYA_FAN_SPD_DADB", "path": "Movement", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Fan speed"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "91F6"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_TRACTION_BAT_SERVICE", "path": "Battery", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Traction battery service plug interlock"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "91F7"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_TRACTION_BAT_INTERLOCK", "path": "Battery", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Traction battery interlock"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9216"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_TRACTION_BAT",             "path": "Battery", "fmt": {          "len": 1, "max": 1, "unit": "scalar" }, "name": "Traction battery overheating"},
+    {"id": "ARIYA_CELLS_OVERVOLAGE",         "path": "Battery", "fmt": {"bix": 1, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cells overvoltage"},
+    {"id": "ARIYA_TRACTION_BAT_OVERCURRENT", "path": "Battery", "fmt": {"bix": 2, "len": 1, "max": 1, "unit": "scalar" }, "name": "Traction battery overcurrent"},
+    {"id": "ARIYA_CELLS_UNDERVOLTAGE",       "path": "Battery", "fmt": {"bix": 3, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cells undervoltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9221"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_BUSBAR_V_NO_1", "path": "Battery", "fmt": { "len": 16, "max": 31.99, "min": -32, "mul": 0.000976563, "sign": true, "unit": "volts" }, "name": "Bus bar 1 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9222"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_BUSBAR_V_NO_2", "path": "Battery", "fmt": { "len": 16, "max": 31.99, "min": -32, "mul": 0.000976563, "sign": true, "unit": "volts" }, "name": "Bus bar 2 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9223"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_BUSBAR_V_NO_3", "path": "Battery", "fmt": { "len": 16, "max": 31.99, "min": -32, "mul": 0.000976563, "sign": true, "unit": "volts" }, "name": "Bus bar 3 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9224"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_BUSBAR_V_NO_4", "path": "Battery", "fmt": { "len": 16, "max": 31.99, "min": -32, "mul": 0.000976563, "sign": true, "unit": "volts" }, "name": "Bus bar 4 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9225"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_BUSBAR_V_NO_5", "path": "Battery", "fmt": { "len": 16, "max": 31.99, "min": -32, "mul": 0.000976563, "sign": true, "unit": "volts" }, "name": "Bus bar 5 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9226"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_BUSBAR_V_NO_6", "path": "Battery", "fmt": { "len": 16, "max": 31.99, "min": -32, "mul": 0.000976563, "sign": true, "unit": "volts" }, "name": "Bus bar 6 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9227"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_BUSBAR_V_NO_7", "path": "Battery", "fmt": { "len": 16, "max": 31.99, "min": -32, "mul": 0.000976563, "sign": true, "unit": "volts" }, "name": "Bus bar 7 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9228"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_BUSBAR_V_NO_8", "path": "Battery", "fmt": { "len": 16, "max": 31.99, "min": -32, "mul": 0.000976563, "sign": true, "unit": "volts" }, "name": "Bus bar 8 voltage"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9242"}, "freq": 5,
+  "signals": [
+    {"id": "ARIYA_MODULE_MIN_T", "path": "Battery", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Module with the minimum temperature"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9245"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_CUM_ENERGY", "path": "Battery", "fmt": { "len": 32, "max": 2147483, "min": -2147483, "div": 1000, "sign": true, "unit": "kilowattHours" }, "name": "Cumulative energy when discharging"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9256"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_CELL_NUMBER_96", "path": "Battery", "fmt": {"bix": 160, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 96 flag"},
+    {"id": "ARIYA_CELL_NUMBER_95", "path": "Battery", "fmt": {"bix": 161, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 95 flag"},
+    {"id": "ARIYA_CELL_NUMBER_94", "path": "Battery", "fmt": {"bix": 162, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 94 flag"},
+    {"id": "ARIYA_CELL_NUMBER_93", "path": "Battery", "fmt": {"bix": 163, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 93 flag"},
+    {"id": "ARIYA_CELL_NUMBER_92", "path": "Battery", "fmt": {"bix": 164, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 92 flag"},
+    {"id": "ARIYA_CELL_NUMBER_91", "path": "Battery", "fmt": {"bix": 165, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 91 flag"},
+    {"id": "ARIYA_CELL_NUMBER_90", "path": "Battery", "fmt": {"bix": 166, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 90 flag"},
+    {"id": "ARIYA_CELL_NUMBER_89", "path": "Battery", "fmt": {"bix": 167, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 89 flag"},
+    {"id": "ARIYA_CELL_NUMBER_88", "path": "Battery", "fmt": {"bix": 168, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 88 flag"},
+    {"id": "ARIYA_CELL_NUMBER_87", "path": "Battery", "fmt": {"bix": 169, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 87 flag"},
+    {"id": "ARIYA_CELL_NUMBER_86", "path": "Battery", "fmt": {"bix": 170, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 86 flag"},
+    {"id": "ARIYA_CELL_NUMBER_85", "path": "Battery", "fmt": {"bix": 171, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 85 flag"},
+    {"id": "ARIYA_CELL_NUMBER_84", "path": "Battery", "fmt": {"bix": 172, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 84 flag"},
+    {"id": "ARIYA_CELL_NUMBER_83", "path": "Battery", "fmt": {"bix": 173, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 83 flag"},
+    {"id": "ARIYA_CELL_NUMBER_82", "path": "Battery", "fmt": {"bix": 174, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 82 flag"},
+    {"id": "ARIYA_CELL_NUMBER_81", "path": "Battery", "fmt": {"bix": 175, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 81 flag"},
+    {"id": "ARIYA_CELL_NUMBER_80", "path": "Battery", "fmt": {"bix": 176, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 80 flag"},
+    {"id": "ARIYA_CELL_NUMBER_78", "path": "Battery", "fmt": {"bix": 177, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 78 flag"},
+    {"id": "ARIYA_CELL_NUMBER_77", "path": "Battery", "fmt": {"bix": 179, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 77 flag"},
+    {"id": "ARIYA_CELL_NUMBER_76", "path": "Battery", "fmt": {"bix": 180, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 76 flag"},
+    {"id": "ARIYA_CELL_NUMBER_75", "path": "Battery", "fmt": {"bix": 181, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 75 flag"},
+    {"id": "ARIYA_CELL_NUMBER_74", "path": "Battery", "fmt": {"bix": 182, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 74 flag"},
+    {"id": "ARIYA_CELL_NUMBER_73", "path": "Battery", "fmt": {"bix": 183, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 73 flag"},
+    {"id": "ARIYA_CELL_NUMBER_72", "path": "Battery", "fmt": {"bix": 184, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 72 flag"},
+    {"id": "ARIYA_CELL_NUMBER_71", "path": "Battery", "fmt": {"bix": 185, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 71 flag"},
+    {"id": "ARIYA_CELL_NUMBER_70", "path": "Battery", "fmt": {"bix": 186, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 70 flag"},
+    {"id": "ARIYA_CELL_NUMBER_69", "path": "Battery", "fmt": {"bix": 187, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 69 flag"},
+    {"id": "ARIYA_CELL_NUMBER_68", "path": "Battery", "fmt": {"bix": 188, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 68 flag"},
+    {"id": "ARIYA_CELL_NUMBER_67", "path": "Battery", "fmt": {"bix": 189, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 67 flag"},
+    {"id": "ARIYA_CELL_NUMBER_66", "path": "Battery", "fmt": {"bix": 190, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 66 flag"},
+    {"id": "ARIYA_CELL_NUMBER_65", "path": "Battery", "fmt": {"bix": 191, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 65 flag"},
+    {"id": "ARIYA_CELL_NUMBER_64", "path": "Battery", "fmt": {"bix": 192, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 64 flag"},
+    {"id": "ARIYA_CELL_NUMBER_63", "path": "Battery", "fmt": {"bix": 193, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 63 flag"},
+    {"id": "ARIYA_CELL_NUMBER_62", "path": "Battery", "fmt": {"bix": 194, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 62 flag"},
+    {"id": "ARIYA_CELL_NUMBER_61", "path": "Battery", "fmt": {"bix": 195, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 61 flag"},
+    {"id": "ARIYA_CELL_NUMBER_60", "path": "Battery", "fmt": {"bix": 196, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 60 flag"},
+    {"id": "ARIYA_CELL_NUMBER_59", "path": "Battery", "fmt": {"bix": 197, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 59 flag"},
+    {"id": "ARIYA_CELL_NUMBER_58", "path": "Battery", "fmt": {"bix": 198, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 58 flag"},
+    {"id": "ARIYA_CELL_NUMBER_57", "path": "Battery", "fmt": {"bix": 199, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 57 flag"},
+    {"id": "ARIYA_CELL_NUMBER_56", "path": "Battery", "fmt": {"bix": 200, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 56 flag"},
+    {"id": "ARIYA_CELL_NUMBER_55", "path": "Battery", "fmt": {"bix": 201, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 55 flag"},
+    {"id": "ARIYA_CELL_NUMBER_54", "path": "Battery", "fmt": {"bix": 202, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 54 flag"},
+    {"id": "ARIYA_CELL_NUMBER_53", "path": "Battery", "fmt": {"bix": 203, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 53 flag"},
+    {"id": "ARIYA_CELL_NUMBER_52", "path": "Battery", "fmt": {"bix": 204, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 52 flag"},
+    {"id": "ARIYA_CELL_NUMBER_51", "path": "Battery", "fmt": {"bix": 205, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 51 flag"},
+    {"id": "ARIYA_CELL_NUMBER_50", "path": "Battery", "fmt": {"bix": 206, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 50 flag"},
+    {"id": "ARIYA_CELL_NUMBER_49", "path": "Battery", "fmt": {"bix": 207, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 49 flag"},
+    {"id": "ARIYA_CELL_NUMBER_48", "path": "Battery", "fmt": {"bix": 208, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 48 flag"},
+    {"id": "ARIYA_CELL_NUMBER_47", "path": "Battery", "fmt": {"bix": 209, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 47 flag"},
+    {"id": "ARIYA_CELL_NUMBER_46", "path": "Battery", "fmt": {"bix": 210, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 46 flag"},
+    {"id": "ARIYA_CELL_NUMBER_45", "path": "Battery", "fmt": {"bix": 211, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 45 flag"},
+    {"id": "ARIYA_CELL_NUMBER_44", "path": "Battery", "fmt": {"bix": 212, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 44 flag"},
+    {"id": "ARIYA_CELL_NUMBER_43", "path": "Battery", "fmt": {"bix": 213, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 43 flag"},
+    {"id": "ARIYA_CELL_NUMBER_42", "path": "Battery", "fmt": {"bix": 214, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 42 flag"},
+    {"id": "ARIYA_CELL_NUMBER_41", "path": "Battery", "fmt": {"bix": 215, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 41 flag"},
+    {"id": "ARIYA_CELL_NUMBER_40", "path": "Battery", "fmt": {"bix": 216, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 40 flag"},
+    {"id": "ARIYA_CELL_NUMBER_39", "path": "Battery", "fmt": {"bix": 217, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 39 flag"},
+    {"id": "ARIYA_CELL_NUMBER_38", "path": "Battery", "fmt": {"bix": 218, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 38 flag"},
+    {"id": "ARIYA_CELL_NUMBER_37", "path": "Battery", "fmt": {"bix": 219, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 37 flag"},
+    {"id": "ARIYA_CELL_NUMBER_36", "path": "Battery", "fmt": {"bix": 220, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 36 flag"},
+    {"id": "ARIYA_CELL_NUMBER_35", "path": "Battery", "fmt": {"bix": 221, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 35 flag"},
+    {"id": "ARIYA_CELL_NUMBER_34", "path": "Battery", "fmt": {"bix": 222, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 34 flag"},
+    {"id": "ARIYA_CELL_NUMBER_33", "path": "Battery", "fmt": {"bix": 223, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 33 flag"},
+    {"id": "ARIYA_CELL_NUMBER_32", "path": "Battery", "fmt": {"bix": 224, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 32 flag"},
+    {"id": "ARIYA_CELL_NUMBER_31", "path": "Battery", "fmt": {"bix": 225, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 31 flag"},
+    {"id": "ARIYA_CELL_NUMBER_30", "path": "Battery", "fmt": {"bix": 226, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 30 flag"},
+    {"id": "ARIYA_CELL_NUMBER_29", "path": "Battery", "fmt": {"bix": 227, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 29 flag"},
+    {"id": "ARIYA_CELL_NUMBER_28", "path": "Battery", "fmt": {"bix": 228, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 28 flag"},
+    {"id": "ARIYA_CELL_NUMBER_27", "path": "Battery", "fmt": {"bix": 229, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 27 flag"},
+    {"id": "ARIYA_CELL_NUMBER_26", "path": "Battery", "fmt": {"bix": 230, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 26 flag"},
+    {"id": "ARIYA_CELL_NUMBER_25", "path": "Battery", "fmt": {"bix": 231, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 25 flag"},
+    {"id": "ARIYA_CELL_NUMBER_24", "path": "Battery", "fmt": {"bix": 232, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 24 flag"},
+    {"id": "ARIYA_CELL_NUMBER_23", "path": "Battery", "fmt": {"bix": 233, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 23 flag"},
+    {"id": "ARIYA_CELL_NUMBER_22", "path": "Battery", "fmt": {"bix": 234, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 22 flag"},
+    {"id": "ARIYA_CELL_NUMBER_21", "path": "Battery", "fmt": {"bix": 235, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 21 flag"},
+    {"id": "ARIYA_CELL_NUMBER_20", "path": "Battery", "fmt": {"bix": 236, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 20 flag"},
+    {"id": "ARIYA_CELL_NUMBER_19", "path": "Battery", "fmt": {"bix": 237, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 19 flag"},
+    {"id": "ARIYA_CELL_NUMBER_18", "path": "Battery", "fmt": {"bix": 238, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 18 flag"},
+    {"id": "ARIYA_CELL_NUMBER_17", "path": "Battery", "fmt": {"bix": 239, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 17 flag"},
+    {"id": "ARIYA_CELL_NUMBER_16", "path": "Battery", "fmt": {"bix": 240, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 16 flag"},
+    {"id": "ARIYA_CELL_NUMBER_15", "path": "Battery", "fmt": {"bix": 241, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 15 flag"},
+    {"id": "ARIYA_CELL_NUMBER_14", "path": "Battery", "fmt": {"bix": 242, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 14 flag"},
+    {"id": "ARIYA_CELL_NUMBER_13", "path": "Battery", "fmt": {"bix": 243, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 13 flag"},
+    {"id": "ARIYA_CELL_NUMBER_12", "path": "Battery", "fmt": {"bix": 244, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 12 flag"},
+    {"id": "ARIYA_CELL_NUMBER_11", "path": "Battery", "fmt": {"bix": 245, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 11 flag"},
+    {"id": "ARIYA_CELL_NUMBER_10", "path": "Battery", "fmt": {"bix": 246, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 10 flag"},
+    {"id": "ARIYA_CELL_NUMBER_9",  "path": "Battery", "fmt": {"bix": 247, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 9 flag"},
+    {"id": "ARIYA_CELL_NUMBER_8",  "path": "Battery", "fmt": {"bix": 248, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 8 flag"},
+    {"id": "ARIYA_CELL_NUMBER_7",  "path": "Battery", "fmt": {"bix": 249, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 7 flag"},
+    {"id": "ARIYA_CELL_NUMBER_6",  "path": "Battery", "fmt": {"bix": 250, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 6 flag"},
+    {"id": "ARIYA_CELL_NUMBER_5",  "path": "Battery", "fmt": {"bix": 251, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 5 flag"},
+    {"id": "ARIYA_CELL_NUMBER_4",  "path": "Battery", "fmt": {"bix": 252, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 4 flag"},
+    {"id": "ARIYA_CELL_NUMBER_3",  "path": "Battery", "fmt": {"bix": 253, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 3 flag"},
+    {"id": "ARIYA_CELL_NUMBER_2",  "path": "Battery", "fmt": {"bix": 254, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 2 flag"},
+    {"id": "ARIYA_CELL_NUMBER_1",  "path": "Battery", "fmt": {"bix": 255, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 1 flag"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "925A"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_FAN_UNIT_FEED", "path": "Battery", "fmt": { "len": 8, "max": 1020, "mul": 4, "unit": "hertz" }, "name": "Fan unit feed"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9261"}, "freq": 30,
+  "signals": [
+    {"id": "ARIYA_ABS_TIME_SINCE_FIRST", "path": "Battery", "fmt": { "len": 24, "max": 16777215, "unit": "minutes" }, "name": "Absolute time since first ignition"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "927A"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_SOH_CELL_96", "path": "Battery", "fmt": {"bix": 160, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 96 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_95", "path": "Battery", "fmt": {"bix": 161, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 95 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_94", "path": "Battery", "fmt": {"bix": 162, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 94 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_93", "path": "Battery", "fmt": {"bix": 163, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 93 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_92", "path": "Battery", "fmt": {"bix": 164, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 92 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_91", "path": "Battery", "fmt": {"bix": 165, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 91 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_90", "path": "Battery", "fmt": {"bix": 166, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 90 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_89", "path": "Battery", "fmt": {"bix": 167, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 89 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_88", "path": "Battery", "fmt": {"bix": 168, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 88 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_87", "path": "Battery", "fmt": {"bix": 169, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 87 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_86", "path": "Battery", "fmt": {"bix": 170, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 86 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_85", "path": "Battery", "fmt": {"bix": 171, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 85 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_84", "path": "Battery", "fmt": {"bix": 172, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 84 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_83", "path": "Battery", "fmt": {"bix": 173, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 83 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_82", "path": "Battery", "fmt": {"bix": 174, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 82 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_81", "path": "Battery", "fmt": {"bix": 175, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 81 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_80", "path": "Battery", "fmt": {"bix": 176, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 80 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_79", "path": "Battery", "fmt": {"bix": 177, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 79 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_78", "path": "Battery", "fmt": {"bix": 178, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 78 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_77", "path": "Battery", "fmt": {"bix": 179, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 77 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_76", "path": "Battery", "fmt": {"bix": 180, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 76 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_75", "path": "Battery", "fmt": {"bix": 181, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 75 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_74", "path": "Battery", "fmt": {"bix": 182, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 74 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_73", "path": "Battery", "fmt": {"bix": 183, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 73 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_72", "path": "Battery", "fmt": {"bix": 184, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 72 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_71", "path": "Battery", "fmt": {"bix": 185, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 71 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_70", "path": "Battery", "fmt": {"bix": 186, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 70 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_69", "path": "Battery", "fmt": {"bix": 187, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 69 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_68", "path": "Battery", "fmt": {"bix": 188, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 68 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_67", "path": "Battery", "fmt": {"bix": 189, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 67 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_66", "path": "Battery", "fmt": {"bix": 190, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 66 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_65", "path": "Battery", "fmt": {"bix": 191, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 65 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_64", "path": "Battery", "fmt": {"bix": 192, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 64 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_63", "path": "Battery", "fmt": {"bix": 193, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 63 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_62", "path": "Battery", "fmt": {"bix": 194, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 62 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_61", "path": "Battery", "fmt": {"bix": 195, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 61 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_60", "path": "Battery", "fmt": {"bix": 196, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 60 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_59", "path": "Battery", "fmt": {"bix": 197, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 59 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_58", "path": "Battery", "fmt": {"bix": 198, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 58 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_57", "path": "Battery", "fmt": {"bix": 199, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 57 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_56", "path": "Battery", "fmt": {"bix": 200, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 56 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_55", "path": "Battery", "fmt": {"bix": 201, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 55 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_54", "path": "Battery", "fmt": {"bix": 202, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 54 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_53", "path": "Battery", "fmt": {"bix": 203, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 53 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_52", "path": "Battery", "fmt": {"bix": 204, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 52 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_51", "path": "Battery", "fmt": {"bix": 205, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 51 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_50", "path": "Battery", "fmt": {"bix": 206, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 50 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_49", "path": "Battery", "fmt": {"bix": 207, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 49 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_48", "path": "Battery", "fmt": {"bix": 208, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 48 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_47", "path": "Battery", "fmt": {"bix": 209, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 47 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_46", "path": "Battery", "fmt": {"bix": 210, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 46 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_45", "path": "Battery", "fmt": {"bix": 211, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 45 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_44", "path": "Battery", "fmt": {"bix": 212, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 44 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_43", "path": "Battery", "fmt": {"bix": 213, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 43 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_42", "path": "Battery", "fmt": {"bix": 214, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 42 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_41", "path": "Battery", "fmt": {"bix": 215, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 41 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_40", "path": "Battery", "fmt": {"bix": 216, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 40 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_39", "path": "Battery", "fmt": {"bix": 217, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 39 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_38", "path": "Battery", "fmt": {"bix": 218, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 38 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_37", "path": "Battery", "fmt": {"bix": 219, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 37 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_36", "path": "Battery", "fmt": {"bix": 220, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 36 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_35", "path": "Battery", "fmt": {"bix": 221, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 35 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_34", "path": "Battery", "fmt": {"bix": 222, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 34 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_33", "path": "Battery", "fmt": {"bix": 223, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 33 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_32", "path": "Battery", "fmt": {"bix": 224, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 32 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_31", "path": "Battery", "fmt": {"bix": 225, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 31 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_30", "path": "Battery", "fmt": {"bix": 226, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 30 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_29", "path": "Battery", "fmt": {"bix": 227, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 29 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_28", "path": "Battery", "fmt": {"bix": 228, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 28 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_27", "path": "Battery", "fmt": {"bix": 229, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 27 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_26", "path": "Battery", "fmt": {"bix": 230, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 26 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_25", "path": "Battery", "fmt": {"bix": 231, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 25 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_24", "path": "Battery", "fmt": {"bix": 232, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 24 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_23", "path": "Battery", "fmt": {"bix": 233, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 23 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_22", "path": "Battery", "fmt": {"bix": 234, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 22 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_21", "path": "Battery", "fmt": {"bix": 235, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 21 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_20", "path": "Battery", "fmt": {"bix": 236, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 20 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_19", "path": "Battery", "fmt": {"bix": 237, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 19 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_18", "path": "Battery", "fmt": {"bix": 238, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 18 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_17", "path": "Battery", "fmt": {"bix": 239, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 17 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_16", "path": "Battery", "fmt": {"bix": 240, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 16 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_15", "path": "Battery", "fmt": {"bix": 241, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 15 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_14", "path": "Battery", "fmt": {"bix": 242, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 14 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_13", "path": "Battery", "fmt": {"bix": 243, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 13 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_12", "path": "Battery", "fmt": {"bix": 244, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 12 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_11", "path": "Battery", "fmt": {"bix": 245, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 11 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_10", "path": "Battery", "fmt": {"bix": 246, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 10 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_9",  "path": "Battery", "fmt": {"bix": 247, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 9 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_8",  "path": "Battery", "fmt": {"bix": 248, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 8 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_7",  "path": "Battery", "fmt": {"bix": 249, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 7 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_6",  "path": "Battery", "fmt": {"bix": 250, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 6 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_5",  "path": "Battery", "fmt": {"bix": 251, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 5 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_4",  "path": "Battery", "fmt": {"bix": 252, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 4 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_3",  "path": "Battery", "fmt": {"bix": 253, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 3 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_2",  "path": "Battery", "fmt": {"bix": 254, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 2 state of health flag"},
+    {"id": "ARIYA_SOH_CELL_1",  "path": "Battery", "fmt": {"bix": 255, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cell 1 state of health flag"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "9284"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_TRACTION_BAT_CURRENT", "path": "Battery", "fmt": { "len": 32, "max": 2147483, "min": -2147483, "mul": -1, "div": 1000, "sign": true, "unit": "amps" }, "name": "Traction battery current", "suggestedMetric": "tractionBatteryCurrent"}
+  ]},
+{ "hdr": "DADB", "rax": "DAF1DB", "fcm1": true, "dbg": true, "cmd": {"22": "F1A0"}, "freq": 1,
+  "signals": [
+    {"id": "ARIYA_FAULT_FINDING", "path": "Battery", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Fault finding version"}
+  ]}
+],
+"signalGroups": [
+  {"id": "ARIYA_HVBAT_CELLS_V", "path": "Battery", "matchingRegex": "ARIYA_HVBAT_(CELL_\\d+)_V", "name": "Cell voltages", "suggestedMetricGroup": "batteryModulesVoltage"}
 ]
 }
