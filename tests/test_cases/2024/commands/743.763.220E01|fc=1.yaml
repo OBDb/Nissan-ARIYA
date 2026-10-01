@@ -10,5 +10,5 @@ test_cases:
     ARIYA_ODO: 12544
   response: '76306620E01003100'
 - expected_values:
-    ARIYA_ODO: 45056
-  response: 76306620E0100B000
+    ARIYA_ODO: 46197
+  response: 76306620E0100B475
