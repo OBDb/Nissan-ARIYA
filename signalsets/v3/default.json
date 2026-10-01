@@ -44,7 +44,7 @@
   ]},
 { "hdr": "744", "rax": "764", "cmd": {"22": "F467"}, "freq": 5, "dbgfilter": { "to": 2022, "from": 2026 },
   "signals": [
-    {"id": "ARIYA_ECT", "path": "Climate", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Coolant temperature"}
+    {"id": "ARIYA_ECT", "path": "Climate", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "nullmax": 215, "unit": "celsius" }, "name": "Coolant temperature"}
   ]},
 { "hdr": "DADA", "rax": "DAF1DA", "fcm1": true, "dbg": true, "cmd": {"22": "2003"}, "freq": 0.25,
   "signals": [
