@@ -1,0 +1,5 @@
+command_id: DADB.DAF1DB.229223|fc=1
+test_cases:
+- expected_values:
+    ARIYA_BUSBAR_V_NO_3: 0
+  response: 18DAF1DB056292230000
