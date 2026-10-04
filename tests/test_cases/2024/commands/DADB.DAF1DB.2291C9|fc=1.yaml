@@ -1,0 +1,5 @@
+command_id: DADB.DAF1DB.2291C9|fc=1
+test_cases:
+- expected_values:
+    ARIYA_MOTOR_DRIVEN_FAN: 0
+  response: 18DAF1DB046291C900
