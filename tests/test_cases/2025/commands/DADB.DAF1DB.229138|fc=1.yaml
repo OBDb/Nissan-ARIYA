@@ -1,0 +1,23 @@
+command_id: DADB.DAF1DB.229138|fc=1
+test_cases:
+- expected_values:
+    ARIYA_MODULE_T_NUMBER_8: 20
+  response: 18DAF1DB0562913803C0
+- expected_values:
+    ARIYA_MODULE_T_NUMBER_8: 20.0625
+  response: 18DAF1DB0562913803C1
+- expected_values:
+    ARIYA_MODULE_T_NUMBER_8: 20.3125
+  response: 18DAF1DB0562913803C5
+- expected_values:
+    ARIYA_MODULE_T_NUMBER_8: 20.4375
+  response: 18DAF1DB0562913803C7
+- expected_values:
+    ARIYA_MODULE_T_NUMBER_8: 20.875
+  response: 18DAF1DB0562913803CE
+- expected_values:
+    ARIYA_MODULE_T_NUMBER_8: 21
+  response: 18DAF1DB0562913803D0
+- expected_values:
+    ARIYA_MODULE_T_NUMBER_8: 21.4375
+  response: 18DAF1DB0562913803D7

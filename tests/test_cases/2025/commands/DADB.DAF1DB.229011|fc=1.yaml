@@ -1,0 +1,14 @@
+command_id: DADB.DAF1DB.229011|fc=1
+test_cases:
+- expected_values:
+    ARIYA_COMPUTER_POWER_SUP: 11.39454
+  response: 18DAF1DB056290112D94
+- expected_values:
+    ARIYA_COMPUTER_POWER_SUP: 12.24512
+  response: 18DAF1DB0562901130FB
+- expected_values:
+    ARIYA_COMPUTER_POWER_SUP: 12.25001
+  response: 18DAF1DB056290113100
+- expected_values:
+    ARIYA_COMPUTER_POWER_SUP: 13.75098
+  response: 18DAF1DB056290113701
