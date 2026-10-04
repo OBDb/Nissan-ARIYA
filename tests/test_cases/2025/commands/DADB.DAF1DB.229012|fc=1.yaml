@@ -1,0 +1,8 @@
+command_id: DADB.DAF1DB.229012|fc=1
+test_cases:
+- expected_values:
+    ARIYA_TRACTION_BAT_T: 20.6875
+  response: 18DAF1DB0562901203CB
+- expected_values:
+    ARIYA_TRACTION_BAT_T: 21.5625
+  response: 18DAF1DB0562901203D9
