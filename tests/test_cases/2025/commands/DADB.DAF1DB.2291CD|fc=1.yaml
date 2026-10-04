@@ -1,0 +1,5 @@
+command_id: DADB.DAF1DB.2291CD|fc=1
+test_cases:
+- expected_values:
+    ARIYA_TRACTION_BAT_INPUT_T: 21
+  response: 18DAF1DB056291CD03D0

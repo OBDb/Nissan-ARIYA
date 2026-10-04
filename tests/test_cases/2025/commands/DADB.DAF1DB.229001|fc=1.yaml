@@ -1,0 +1,29 @@
+command_id: DADB.DAF1DB.229001|fc=1
+test_cases:
+- expected_values:
+    ARIYA_TRACTION_BAT_SOC: 61.31
+  response: 18DAF1DB05629001191F
+- expected_values:
+    ARIYA_TRACTION_BAT_SOC: 61.35
+  response: 18DAF1DB056290011923
+- expected_values:
+    ARIYA_TRACTION_BAT_SOC: 61.42
+  response: 18DAF1DB05629001192A
+- expected_values:
+    ARIYA_TRACTION_BAT_SOC: 61.45
+  response: 18DAF1DB05629001192D
+- expected_values:
+    ARIYA_TRACTION_BAT_SOC: 61.49
+  response: 18DAF1DB056290011931
+- expected_values:
+    ARIYA_TRACTION_BAT_SOC: 61.55
+  response: 18DAF1DB056290011937
+- expected_values:
+    ARIYA_TRACTION_BAT_SOC: 61.59
+  response: 18DAF1DB05629001193B
+- expected_values:
+    ARIYA_TRACTION_BAT_SOC: 61.65
+  response: 18DAF1DB056290011941
+- expected_values:
+    ARIYA_TRACTION_BAT_SOC: 61.69
+  response: 18DAF1DB056290011945

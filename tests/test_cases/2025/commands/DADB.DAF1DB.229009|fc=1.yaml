@@ -1,0 +1,26 @@
+command_id: DADB.DAF1DB.229009|fc=1
+test_cases:
+- expected_values:
+    ARIYA_LOWEST_CELL_V_LEVEL: 3.80664
+  response: 18DAF1DB056290090F3A
+- expected_values:
+    ARIYA_LOWEST_CELL_V_LEVEL: 3.81348
+  response: 18DAF1DB056290090F41
+- expected_values:
+    ARIYA_LOWEST_CELL_V_LEVEL: 3.81446
+  response: 18DAF1DB056290090F42
+- expected_values:
+    ARIYA_LOWEST_CELL_V_LEVEL: 3.81543
+  response: 18DAF1DB056290090F43
+- expected_values:
+    ARIYA_LOWEST_CELL_V_LEVEL: 3.81641
+  response: 18DAF1DB056290090F44
+- expected_values:
+    ARIYA_LOWEST_CELL_V_LEVEL: 3.81836
+  response: 18DAF1DB056290090F46
+- expected_values:
+    ARIYA_LOWEST_CELL_V_LEVEL: 3.81934
+  response: 18DAF1DB056290090F47
+- expected_values:
+    ARIYA_LOWEST_CELL_V_LEVEL: 3.82031
+  response: 18DAF1DB056290090F48

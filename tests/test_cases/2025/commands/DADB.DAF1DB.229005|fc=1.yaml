@@ -1,0 +1,23 @@
+command_id: DADB.DAF1DB.229005|fc=1
+test_cases:
+- expected_values:
+    ARIYA_OPEN_CIRCUIT_V: 36.57
+  response: 18DAF1DB056290050E49
+- expected_values:
+    ARIYA_OPEN_CIRCUIT_V: 36.7
+  response: 18DAF1DB056290050E56
+- expected_values:
+    ARIYA_OPEN_CIRCUIT_V: 36.71
+  response: 18DAF1DB056290050E57
+- expected_values:
+    ARIYA_OPEN_CIRCUIT_V: 36.72
+  response: 18DAF1DB056290050E58
+- expected_values:
+    ARIYA_OPEN_CIRCUIT_V: 36.73
+  response: 18DAF1DB056290050E59
+- expected_values:
+    ARIYA_OPEN_CIRCUIT_V: 36.74
+  response: 18DAF1DB056290050E5A
+- expected_values:
+    ARIYA_OPEN_CIRCUIT_V: 36.75
+  response: 18DAF1DB056290050E5B

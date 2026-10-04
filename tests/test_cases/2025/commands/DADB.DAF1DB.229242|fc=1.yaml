@@ -1,0 +1,8 @@
+command_id: DADB.DAF1DB.229242|fc=1
+test_cases:
+- expected_values:
+    ARIYA_MODULE_MIN_T: 8
+  response: 18DAF1DB0462924208
+- expected_values:
+    ARIYA_MODULE_MIN_T: 11
+  response: 18DAF1DB046292420B
