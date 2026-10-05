@@ -1,0 +1,14 @@
+command_id: DADA.DAF1DA.2220FE|fc=1
+test_cases:
+- expected_values:
+    ARIYA_DC_BAT_V: 333.7
+  response: 18DAF1DA056220FE0D09
+- expected_values:
+    ARIYA_DC_BAT_V: 358.3
+  response: 18DAF1DA056220FE0DFF
+- expected_values:
+    ARIYA_DC_BAT_V: 358.4
+  response: 18DAF1DA056220FE0E00
+- expected_values:
+    ARIYA_DC_BAT_V: 384.1
+  response: 18DAF1DA056220FE0F01
