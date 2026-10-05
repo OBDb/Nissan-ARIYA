@@ -1,0 +1,11 @@
+command_id: DADA.DAF1DA.222003|fc=1
+test_cases:
+- expected_values:
+    ARIYA_VSS: 0
+  response: 18DAF1DA056220030000
+- expected_values:
+    ARIYA_VSS: 87.01
+  response: 18DAF1DA0562200321FD
+- expected_values:
+    ARIYA_VSS: 141.56
+  response: 18DAF1DA05622003374C
