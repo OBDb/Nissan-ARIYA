@@ -1,0 +1,11 @@
+command_id: DADB.DAF1DB.229134|fc=1
+test_cases:
+- expected_values:
+    ARIYA_MODULE_T_NUMBER_4: 19
+  response: 18DAF1DB0562913403B0
+- expected_values:
+    ARIYA_MODULE_T_NUMBER_4: 23.4375
+  response: 18DAF1DB0562913403F7
+- expected_values:
+    ARIYA_MODULE_T_NUMBER_4: 40
+  response: 18DAF1DB056291340500
