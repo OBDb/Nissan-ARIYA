@@ -1,0 +1,14 @@
+command_id: DADB.DAF1DB.229009|fc=1
+test_cases:
+- expected_values:
+    ARIYA_LOWEST_CELL_V_LEVEL: 3.13477
+  response: 18DAF1DB056290090C8A
+- expected_values:
+    ARIYA_LOWEST_CELL_V_LEVEL: 3.75
+  response: 18DAF1DB056290090F00
+- expected_values:
+    ARIYA_LOWEST_CELL_V_LEVEL: 3.99903
+  response: 18DAF1DB056290090FFF
+- expected_values:
+    ARIYA_LOWEST_CELL_V_LEVEL: 4.00196
+  response: 18DAF1DB056290091002
