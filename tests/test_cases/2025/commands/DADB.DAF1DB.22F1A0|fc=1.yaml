@@ -1,0 +1,5 @@
+command_id: DADB.DAF1DB.22F1A0|fc=1
+test_cases:
+- expected_values:
+    ARIYA_FAULT_FINDING: 4
+  response: 18DAF1DB0462F1A004
