@@ -1,0 +1,11 @@
+command_id: DADA.DAF1DA.2221CC|fc=1
+test_cases:
+- expected_values:
+    ARIYA_DC_BAT_CURRENT: 500
+  response: 18DAF1DA056221CC0000
+- expected_values:
+    ARIYA_DC_BAT_CURRENT: -15819.75
+  response: 18DAF1DA056221CCFEFF
+- expected_values:
+    ARIYA_DC_BAT_CURRENT: -15820
+  response: 18DAF1DA056221CCFF00
