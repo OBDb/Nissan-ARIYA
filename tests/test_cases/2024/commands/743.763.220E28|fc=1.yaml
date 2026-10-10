@@ -1,8 +1,8 @@
 command_id: 743.763.220E28|fc=1
 test_cases:
 - expected_values:
-    ARIYA_TP_RL: 241.31652
-  response: 76304620E288C
+    ARIYA_TP_RL: null
+  response: '76304620E2800'
 - expected_values:
     ARIYA_TP_RL: 317.15885
   response: 76304620E28B8
