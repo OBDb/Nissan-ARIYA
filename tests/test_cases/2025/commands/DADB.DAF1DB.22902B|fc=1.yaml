@@ -1,0 +1,11 @@
+command_id: DADB.DAF1DB.22902B|fc=1
+test_cases:
+- expected_values:
+    ARIYA_HVBAT_CELL_11_V: 0
+  response: 18DAF1DB0562902B0000
+- expected_values:
+    ARIYA_HVBAT_CELL_11_V: 3.49903
+  response: 18DAF1DB0562902B0DFF
+- expected_values:
+    ARIYA_HVBAT_CELL_11_V: 4
+  response: 18DAF1DB0562902B1000
