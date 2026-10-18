@@ -1,0 +1,8 @@
+command_id: DADB.DAF1DB.229013|fc=1
+test_cases:
+- expected_values:
+    ARIYA_TRACTION_BAT_MIN_T: 31.4375
+  response: 18DAF1DB056290130477
+- expected_values:
+    ARIYA_TRACTION_BAT_MIN_T: 32
+  response: 18DAF1DB056290130480
