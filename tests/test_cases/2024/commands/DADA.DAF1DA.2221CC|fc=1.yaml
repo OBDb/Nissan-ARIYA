@@ -1,0 +1,23 @@
+command_id: DADA.DAF1DA.2221CC|fc=1
+test_cases:
+- expected_values:
+    ARIYA_DC_BAT_CURRENT: -15880
+  response: 18DAF1DA056221CCFFF0
+- expected_values:
+    ARIYA_DC_BAT_CURRENT: -15880.25
+  response: 18DAF1DA056221CCFFF1
+- expected_values:
+    ARIYA_DC_BAT_CURRENT: -15880.75
+  response: 18DAF1DA056221CCFFF3
+- expected_values:
+    ARIYA_DC_BAT_CURRENT: -15881
+  response: 18DAF1DA056221CCFFF4
+- expected_values:
+    ARIYA_DC_BAT_CURRENT: -15883
+  response: 18DAF1DA056221CCFFFC
+- expected_values:
+    ARIYA_DC_BAT_CURRENT: -15883
+  response: 18DAF1DA056221CCFFFD
+- expected_values:
+    ARIYA_DC_BAT_CURRENT: -15883
+  response: 18DAF1DA056221CCFFFE
