@@ -1,0 +1,17 @@
+command_id: DADB.DAF1DB.22900A|fc=1
+test_cases:
+- expected_values:
+    ARIYA_CELL_LOWEST_V: 1
+  response: 18DAF1DB0462900A00
+- expected_values:
+    ARIYA_CELL_LOWEST_V: 2
+  response: 18DAF1DB0462900A01
+- expected_values:
+    ARIYA_CELL_LOWEST_V: 3
+  response: 18DAF1DB0462900A02
+- expected_values:
+    ARIYA_CELL_LOWEST_V: 5
+  response: 18DAF1DB0462900A04
+- expected_values:
+    ARIYA_CELL_LOWEST_V: 11
+  response: 18DAF1DB0462900A0A
