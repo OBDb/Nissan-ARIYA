@@ -1,0 +1,11 @@
+command_id: DADB.DAF1DB.229261|fc=1
+test_cases:
+- expected_values:
+    ARIYA_ABS_TIME_SINCE_FIRST: 1375756
+  response: 18DAF1DB0662926114FE0C
+- expected_values:
+    ARIYA_ABS_TIME_SINCE_FIRST: 1376066
+  response: 18DAF1DB0662926114FF42
+- expected_values:
+    ARIYA_ABS_TIME_SINCE_FIRST: 1376071
+  response: 18DAF1DB0662926114FF47
