@@ -1,0 +1,12 @@
+command_id: DB33.019B
+test_cases:
+- expected_values:
+    DEF_CON: 0
+    DEF_CON_SUP: 0
+    DEF_LVL: 0
+    DEF_LVL_SUP: 0
+    DEF_T: -40
+    DEF_TYPE: Urea too high
+    DEF_TYPE_SUP: 0
+    DEF_T_SUP: 0
+  response: 18DAF11006419B00000000

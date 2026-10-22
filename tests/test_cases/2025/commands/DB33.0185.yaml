@@ -1,0 +1,14 @@
+command_id: DB33.0185
+test_cases:
+- expected_values:
+    NWI_TIME: 0
+    NWI_TIME_SUP: 0
+    REAG_DEMD: 0
+    REAG_DEMD_SUP: 0
+    REAG_LVL: 0
+    REAG_LVL_SUP: 0
+    REAG_RATE: 0
+    REAG_RATE_SUP: 0
+  response: |-
+    18DAF110100C418500000000
+    18DAF11021000000000000AA
