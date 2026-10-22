@@ -1,0 +1,5 @@
+command_id: DADB.DAF1DB.22912E|fc=1
+test_cases:
+- expected_values:
+    ARIYA_FAN_SPD: 0
+  response: 18DAF1DB0462912E00
