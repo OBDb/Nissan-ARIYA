@@ -1,0 +1,22 @@
+command_id: DB33.0194
+test_cases:
+- expected_values:
+    EGR_TIME: 0
+    EGR_TIME_SUP: 0
+    INDUC_L1: Inactive
+    INDUC_L2: Inactive
+    INDUC_L3: Inactive
+    MON_SYS_TIME: 0
+    MON_SYS_TIME_SUP: 0
+    NOX_WARN_ACT: 0
+    NOX_WARN_ACT_SUP: 0
+    REAG_CON_TIME: 0
+    REAG_CON_TIME_SUP: 0
+    REAG_DOSE_TIME: 0
+    REAG_DOSE_TIME_SUP: 0
+    REAG_QUAL_TIME: 0
+    REAG_QUAL_TIME_SUP: 0
+  response: |-
+    18DAF110100E419400000000
+    18DAF1102100000000000000
+    18DAF1102200AAAAAAAAAAAA

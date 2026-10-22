@@ -1,0 +1,8 @@
+command_id: DB33.01A5
+test_cases:
+- expected_values:
+    DEF_CMD: 0
+    DEF_CMD_SUP: 0
+    DEF_UCDC: 0
+    DEF_UCDC_SUP: 0
+  response: 18DAF1100641A500000000
