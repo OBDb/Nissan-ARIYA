@@ -1,0 +1,14 @@
+command_id: DB33.016E
+test_cases:
+- expected_values:
+    ICP_A: 0
+    ICP_A_CMD: 0
+    ICP_A_CMD_SUP: 0
+    ICP_A_SUP: 0
+    ICP_B: 0
+    ICP_B_CMD: 0
+    ICP_B_CMD_SUP: 0
+    ICP_B_SUP: 0
+  response: |-
+    18DAF110100B416E00000000
+    18DAF110210000000000AAAA
