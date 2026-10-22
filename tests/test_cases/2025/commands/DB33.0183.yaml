@@ -1,0 +1,18 @@
+command_id: DB33.0183
+test_cases:
+- expected_values:
+    NOX11: 0
+    NOX11_NA: 0
+    NOX11_SUP: 0
+    NOX12: 0
+    NOX12_NA: 0
+    NOX12_SUP: 0
+    NOX21: 0
+    NOX21_NA: 0
+    NOX21_SUP: 0
+    NOX22: 0
+    NOX22_NA: 0
+    NOX22_SUP: 0
+  response: |-
+    18DAF110100B418300000000
+    18DAF110210000000000AAAA
