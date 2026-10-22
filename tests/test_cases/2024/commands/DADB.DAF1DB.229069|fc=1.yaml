@@ -1,0 +1,26 @@
+command_id: DADB.DAF1DB.229069|fc=1
+test_cases:
+- expected_values:
+    ARIYA_HVBAT_CELL_71_V: 4.04883
+  response: 18DAF1DB056290691032
+- expected_values:
+    ARIYA_HVBAT_CELL_71_V: 4.04981
+  response: 18DAF1DB056290691033
+- expected_values:
+    ARIYA_HVBAT_CELL_71_V: 4.05078
+  response: 18DAF1DB056290691034
+- expected_values:
+    ARIYA_HVBAT_CELL_71_V: 4.05274
+  response: 18DAF1DB056290691036
+- expected_values:
+    ARIYA_HVBAT_CELL_71_V: 4.05371
+  response: 18DAF1DB056290691037
+- expected_values:
+    ARIYA_HVBAT_CELL_71_V: 4.08301
+  response: 18DAF1DB056290691055
+- expected_values:
+    ARIYA_HVBAT_CELL_71_V: 4.08399
+  response: 18DAF1DB056290691056
+- expected_values:
+    ARIYA_HVBAT_CELL_71_V: 4.08496
+  response: 18DAF1DB056290691057

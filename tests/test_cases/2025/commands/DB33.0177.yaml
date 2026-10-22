@@ -1,0 +1,12 @@
+command_id: DB33.0177
+test_cases:
+- expected_values:
+    CACT_11: -40
+    CACT_11_SUP: 0
+    CACT_12: -40
+    CACT_12_SUP: 0
+    CACT_21: -40
+    CACT_21_SUP: 0
+    CACT_22: -40
+    CACT_22_SUP: 0
+  response: 18DAF1100741770000000000
