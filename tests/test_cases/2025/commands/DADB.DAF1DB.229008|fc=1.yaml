@@ -1,0 +1,8 @@
+command_id: DADB.DAF1DB.229008|fc=1
+test_cases:
+- expected_values:
+    ARIYA_CELL_HIGHEST_V: 1
+  response: 18DAF1DB0462900800
+- expected_values:
+    ARIYA_CELL_HIGHEST_V: 95
+  response: 18DAF1DB046290085E
