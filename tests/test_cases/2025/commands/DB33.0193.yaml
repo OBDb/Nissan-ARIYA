@@ -1,0 +1,6 @@
+command_id: DB33.0193
+test_cases:
+- expected_values:
+    MI_TIME_CUM: 0
+    MI_TIME_CUM_SUP: 0
+  response: 18DAF110054193000000
