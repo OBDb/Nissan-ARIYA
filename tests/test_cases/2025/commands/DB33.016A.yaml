@@ -1,0 +1,12 @@
+command_id: DB33.016A
+test_cases:
+- expected_values:
+    IAF_A_CMD: 0
+    IAF_A_CMD_SUP: 0
+    IAF_A_REL: 0
+    IAF_A_REL_SUP: 0
+    IAF_B_CMD: 0
+    IAF_B_CMD_SUP: 0
+    IAF_B_REL: 0
+    IAF_B_REL_SUP: 0
+  response: 18DAF11007416A0000000000
