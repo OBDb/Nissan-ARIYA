@@ -1,0 +1,8 @@
+command_id: DB33.01AC
+test_cases:
+- expected_values:
+    DEFA_MAX: 0
+    DEFA_MAX_SUP: 0
+    DEFA_MODE: 0
+    DEFA_MODE_SUP: 0
+  response: 18DAF1100641AC00000000
