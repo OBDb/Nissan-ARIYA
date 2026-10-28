@@ -1,11 +1,17 @@
 command_id: DADB.DAF1DB.229006|fc=1
 test_cases:
 - expected_values:
+    ARIYA_HVBAT_V: 347.15625
+  response: 18DAF1DB0762900600056CA0
+- expected_values:
+    ARIYA_HVBAT_V: 351
+  response: 18DAF1DB0762900600057C00
+- expected_values:
+    ARIYA_HVBAT_V: 352.96875
+  response: 18DAF1DB07629006000583E0
+- expected_values:
+    ARIYA_HVBAT_V: 354.65625
+  response: 18DAF1DB0762900600058AA0
+- expected_values:
     ARIYA_HVBAT_V: 388.78125
   response: 18DAF1DB0762900600061320
-- expected_values:
-    ARIYA_HVBAT_V: 388.875
-  response: 18DAF1DB0762900600061380
-- expected_values:
-    ARIYA_HVBAT_V: 391.96875
-  response: 18DAF1DB0762900600061FE0
