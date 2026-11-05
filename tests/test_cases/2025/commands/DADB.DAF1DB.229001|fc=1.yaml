@@ -10,5 +10,10 @@ test_cases:
     ARIYA_TRACTION_BAT_SOC: 30.27
   response: 18DAF1DB056290010CFF
 - expected_values:
+    ARIYA_TRACTION_BAT_SOC: 44.41
+  response: |-
+    18DAF1DB056290011285
+    18DAF1DB044131FFFF
+- expected_values:
     ARIYA_TRACTION_BAT_SOC: 96.93
   response: 18DAF1DB056290012709
