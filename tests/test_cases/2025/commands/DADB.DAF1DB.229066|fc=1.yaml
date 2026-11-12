@@ -4,8 +4,8 @@ test_cases:
     ARIYA_HVBAT_CELL_68_V: 0
   response: 18DAF1DB056290660000
 - expected_values:
-    ARIYA_HVBAT_CELL_68_V: 3.99903
-  response: 18DAF1DB056290660FFF
+    ARIYA_HVBAT_CELL_68_V: 3.49903
+  response: 18DAF1DB056290660DFF
 - expected_values:
     ARIYA_HVBAT_CELL_68_V: 4
   response: 18DAF1DB056290661000
