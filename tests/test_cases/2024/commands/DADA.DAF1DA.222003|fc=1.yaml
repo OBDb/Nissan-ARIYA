@@ -4,8 +4,8 @@ test_cases:
     ARIYA_VSS: 0
   response: 18DAF1DA056220030000
 - expected_values:
-    ARIYA_VSS: 66.27
-  response: 18DAF1DA0562200319E3
+    ARIYA_VSS: 91.95
+  response: 18DAF1DA0562200323EB
 - expected_values:
-    ARIYA_VSS: 80.52
-  response: 18DAF1DA056220031F74
+    ARIYA_VSS: 96.48
+  response: 18DAF1DA0562200325B0
